@@ -12,16 +12,16 @@ This repository is for globant coding process
 To use this project, follow these steps:
 
 ### Clone the repository
-git clone https://github.com/nCabanillas/CodingChallenge.git
+`git clone https://github.com/nCabanillas/CodingChallenge.git`
 
 ### Create a virtual environment
-python -m venv env
+```python -m venv env```
 
 ### Activate the virtual environment
-env\Scripts\activate
+`env\Scripts\activate`
 
 ### Install project dependencies
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 ### Navigate to the project directory
 cd drf
