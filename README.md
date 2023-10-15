@@ -11,28 +11,28 @@ This repository is for globant coding process
 
 To use this project, follow these steps:
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/nCabanillas/CodingChallenge.git
 
-# Create a virtual environment
+### Create a virtual environment
 python -m venv env
 
-# Activate the virtual environment
+### Activate the virtual environment
 env\Scripts\activate
 
-# Install project dependencies
+### Install project dependencies
 pip install -r requirements.txt
 
-# Navigate to the project directory
+### Navigate to the project directory
 cd drf
 
-# Run migrations
+### Run migrations
 python manage.py migrate
 
-# Start the development server
+### Start the development server
 python manage.py runserver
 
-# Finally
+### Finally
 Open a web browser and go to `http://localhost:8080`.
 
 ## License
