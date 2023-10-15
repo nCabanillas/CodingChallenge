@@ -24,13 +24,13 @@ To use this project, follow these steps:
 ```pip install -r requirements.txt```
 
 ### Navigate to the project directory
-cd drf
+`cd drf`
 
 ### Run migrations
-python manage.py migrate
+`python manage.py migrate`
 
 ### Start the development server
-python manage.py runserver
+`python manage.py runserver`
 
 ### Finally
 Open a web browser and go to `http://localhost:8080`.
