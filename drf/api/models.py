@@ -14,5 +14,5 @@ class Employees():
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=100)
     datetime = models.DateTimeField()
-    department_id = models.IntegerField(primary_key=True)
+    department_id = models.IntegerField()
     job_id = models.IntegerField()
