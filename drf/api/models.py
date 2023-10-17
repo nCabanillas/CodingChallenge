@@ -6,11 +6,11 @@ class Departments(models.Model):
     id = models.IntegerField(primary_key=True)
     department = models.CharField(max_length=100)
     
-class Jobs():
+class Jobs(models.Model):
     id = models.IntegerField(primary_key=True)
     job = models.CharField(max_length=100)    
 
-class Employees():
+class Employees(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=100)
     datetime = models.DateTimeField()

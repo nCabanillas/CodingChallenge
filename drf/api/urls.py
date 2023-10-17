@@ -4,6 +4,8 @@ from api import views
 
 router = routers.DefaultRouter() 
 router.register(r'department',views.DepartmentsViewSet)
+router.register(r'employees',views.EmployeesViewSet)
+router.register(r'jobs',views.JobsViewSet)
 
 urlpatterns = [
     path('',include(router.urls))
