@@ -8,5 +8,6 @@ router.register(r'employees',views.EmployeesViewSet)
 router.register(r'jobs',views.JobsViewSet)
 
 urlpatterns = [
-    path('',include(router.urls))
+    path('',include(router.urls)),
+    path('export_csv/', views.export_csv, name='export_csv')
 ]
