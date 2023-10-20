@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "api",
+    "import_export",
     "coreapi",
-    "api"
+    
 ]
 
 MIDDLEWARE = [
@@ -78,8 +80,12 @@ WSGI_APPLICATION = "drf.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "NOETEST", #BASE_DIR / "db.sqlite3",
+        "USER": "admin",
+        "PASSWORD": "Governance!14",
+        "HOST":"awsdj-globant.cdtlrdry5uzg.us-east-1.rds.amazonaws.com",
+        "PORT":"3306"
     }
 }
 
