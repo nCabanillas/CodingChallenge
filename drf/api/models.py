@@ -29,7 +29,7 @@ class Jobs(models.Model):
 class Employees(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=100)
-    datetime = models.DateTimeField(auto_now=True, auto_now_add=False)
+    datetime = models.CharField(max_length=200)
     department_id = models.IntegerField()
     job_id = models.IntegerField()
     
