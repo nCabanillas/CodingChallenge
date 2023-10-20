@@ -27,7 +27,7 @@ class EmployeesUploadView(APIView):
         file_obj = request.data['file'] #Json send by post request
         columns_name = ['id','name','datetime','department_id','job_id']
         df = pd.read_csv(file_obj, names=columns_name)
-        
+
         df['job_id'] = df['job_id'].fillna(0) #la columna 'job_id' reemplazamos quitar NaN 
         df['department_id'] = df['department_id'].fillna(0) #la columna 'job_id' reemplazamos quitar NaN 
         
@@ -67,20 +67,20 @@ class DepartmentsUploadView(APIView):
             return Response({'message': 'Object not found'}, status=404)
 
         return Response({"message": "DataFrame received and processed successfully"})
-    
+
 class JobsUploadView(APIView):
     def post(self, request,*args ,**kwargs):
         file_obj = request.data['file'] #Json send by post request
         columns_name = ['id','job']
         df = pd.read_csv(file_obj, names=columns_name)
-        
+
         try:
             for idx in df.index:
                 id = df.iloc[idx]['id']
                 job = df.iloc[idx]['job']
                 print(f'DATA: id = {id} , job = {job}')
 
-                object = Jobs(id=id, department=department)
+                object = Jobs(id=id, job=job)
                 object.save()
 
         except Departments.DoesNotExist:
